@@ -1,0 +1,5 @@
+{% if messages %}
+    {% for message in messages %}
+        <p{% if message.tags %} class="alert alert-success alert-dismissible fade show {{ message.tags }}"{% endif %} role="alert">{{ message }}</p>
+    {% endfor %}
+{% endif %}

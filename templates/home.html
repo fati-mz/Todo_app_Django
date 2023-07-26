@@ -1,0 +1,24 @@
+{% extends 'bace.html' %}
+ 
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    {% if todos %}
+        {% for t in todos %}
+        <div class="col ">
+            <div class="card text-bg-light mb-3 m-4">
+                <div class="card-body border-success mb-3">
+                    <h3 ><a href="{% url 'details' t.id %}" class="card-title">{{ t.title}}</a></h3><hr>
+                     <small>{{ t.created}}</small>
+                     <p class="card-text">>{{ t.body}}</p>
+                </div>
+           </div>
+        </div>
+        {% endfor %}
+    {% else %}
+        <p>there is not any todos</p>
+    {% endif %}
+
+</div>
+{% endblock content %}
