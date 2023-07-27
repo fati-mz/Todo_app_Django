@@ -10,14 +10,17 @@
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         {% if request.user.is_authenticated %}
         <li class="nav-item">
-          <a class="nav-link " href="{% url 'logout' %}" tabindex="-1" aria-disabled="true">Log Out</a>
+          <a class="nav-link " style="color: blue" href="{% url 'create' %}" tabindex="-1" aria-disabled="true">Create New Todo</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " style="color: #ff0055" href="{% url 'logout' %}" tabindex="-1" aria-disabled="true">Log Out</a>
         </li>
         {% else %}
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="{% url 'register' %}">Register</a>
+          <a class="nav-link active" aria-current="page" style="color: green" href="{% url 'register' %}">Register</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{% url 'login' %}">Login</a>
+          <a class="nav-link" style="color: blue" href="{% url 'login' %}">Login</a>
         </li>
         {% endif %}
       </ul>

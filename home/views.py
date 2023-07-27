@@ -7,7 +7,7 @@ from .forms import TodoCreateForm, TodoUpdateForm
 # Create your views here.
 
 def home(request):
-    all_todos = Todo.objects.all().iterator()
+    all_todos = Todo.objects.filter(user=request.user)
     return render(request, 'home.html', {'todos': all_todos})
 
 
