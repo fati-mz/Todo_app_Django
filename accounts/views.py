@@ -39,4 +39,4 @@ def user_login(request):
 def user_logout(request):
     logout(request)
     messages.success(request, 'successfully logged out', 'success')
-    return redirect('home')
+    return redirect('register')
