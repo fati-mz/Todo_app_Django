@@ -1,0 +1,12 @@
+.text{
+    backgradient(transparent 0%,hotpink 100%);
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    background-position-x: right;
+    transition: background-size 300ms;
+}
+
+.text:hover{
+    background-size: 100% 100%;
+    background-position-x: left;
+}

@@ -7,11 +7,16 @@
     {% if todos %}
         {% for t in todos %}
         <div class="col ">
-            <div class="card text-bg-light mb-3 m-4">
-                <div class="card-body border-success mb-3">
-                    <h3 ><a href="{% url 'details' t.id %}" class="card-title">{{ t.title}}</a></h3><hr>
-                     <small>{{ t.created}}</small>
+            <div class="card  mb-3 m-4">
+                <div class="card-body mb-3">
+                    <h3 class="card-title">{{ t.title}}</h3><hr>
                      <p class="card-text">>{{ t.body}}</p>
+                </div>
+                <div class="card-footer bg-transparent ">
+                    {{ t.created}}
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                      <a class="btn btn-link " href="{% url 'details' t.id %}" type="button">Detail</a>
+                    </div>
                 </div>
            </div>
         </div>

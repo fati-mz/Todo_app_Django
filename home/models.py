@@ -8,3 +8,6 @@ class Todo(models.Model):
     body = models.TextField()
     created = models.DateTimeField()
 
+    def __str__(self):
+        return self.body
+
